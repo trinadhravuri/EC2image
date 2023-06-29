@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Images</title>
+</head>
+<body>
+    <section>
+        <div class="title-head">
+            <h1>My all images</h1>
+        </div>
+        <div>
+            <ul style="display: flex;flex-wrap: wrap;">
+            {% for image in images %}
+            <li><img src="{{image.image.url}}" alt="" style="width: 300px;height: 300px;">
+            {{image.image_name}}</li>
+
+            {% endfor %}
+            </ul>
+        </div>
+    </section>
+</body>
+</html>
